@@ -46,7 +46,7 @@
             <li class="nav__item">
               <a href="#new" class="nav__link">Tecnología</a>
             </li>
-            <a href="#" class="button button--ghost">Contacto</a>
+            <a id="openForm" class="button button--ghost">Contacto</a>
           </ul>
           <div class="nav__close" id="nav-close">
             <i class="bx bx-x"></i>
@@ -59,6 +59,33 @@
       </nav>
     </header>
     <!-- #endregion -->
+    <!-- #region formulario de registro  -->
+    <div class="form-popup" id="myForm">
+      <form action="/" class="form-container">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="Escribe Nombre" id="contact_name" name="nombre" required>
+
+        <label for="email">Email</label>
+        <input type="text" placeholder="Escribe Email" id="contact_email" name="email" required>
+
+        <label for="eleccion">Selecciona</label>
+        <select name="select" class="my-select-menu" id="eleccion">
+          <option value="sistemaweb">Sistema Web</option>
+          <option value="ecommerce">Ecommerce</option>
+          <option value="servicioweb">Servicio Web</option>
+          <option value="paginaweb">Página Web</option>
+          <option value="paginaadaptable">Página Adaptable</option>
+        </select>
+
+        <label for="desc">Descripcion (opcional)</label>
+        <textarea name="descripcion" class="descripcion" id="contact_desc"></textarea>
+
+        <button type="submit" class="btn">Enviar</button>
+        <button type="button" class="btn cancel" id="closeForm">Cancelar</button>
+      </form>
+    </div>
+    <!-- #endregion formulario de registro  -->
     <!-- #region Principal-->
     <main class="main">
       <!--Menu inicial-->
@@ -254,9 +281,14 @@
               alt=""
               class="trick__img"
             />
-            <h3 class="trick__title">Página informativa</h3>
-            <span class="trick__subtitle">Candy</span>
-            <span class="trick__price">$11.99</span>
+            <h3 class="trick__title">WEBSITE</h3>
+            <p class="about__product">Página Web de presentación - Ideal para páginas de hoja de vida, publicidad, contacto, entre otros.</p>
+            
+            <div class="new__prices">
+              <span class="new__price">s/. 3000.00</span>
+              <span class="new__discount">s/. 3225.00</span>
+            </div>
+
             <button class="button trick__button">
               <i class="bx bx-cart-alt trick__icon"></i>
             </button>
@@ -268,9 +300,13 @@
               alt=""
               class="trick__img"
             />
-            <h3 class="trick__title">Página Adaptable</h3>
-            <span class="trick__subtitle">Página Adaptable</span>
-            <span class="trick__price">$8.99</span>
+            <h3 class="trick__title">WEBSITE PREMIUM</h3>
+            <p class="about__product">Página adaptable a todos los dispositivos, equipado con carga más rápida y elementos modernos.</p>
+            <div class="new__prices">
+              <span class="new__price">s/. 7000.00</span>
+              <span class="new__discount">s/. 7800.00</span>
+            </div>
+
             <button class="button trick__button">
               <i class="bx bx-cart-alt trick__icon"></i>
             </button>
@@ -282,12 +318,9 @@
               alt=""
               class="trick__img"
             />
-            <h3 class="trick__title">Sistema Web</h3>
-            <span class="trick__subtitle">Accessory</span>
-            <span class="trick__price">$15.99</span>
-            <button class="button trick__button">
-              <i class="bx bx-cart-alt trick__icon"></i>
-            </button>
+            <h3 class="trick__title">SISTEMA WEB</h3>
+            <p class="about__product">Sistemas Web, con módulos para recursos humanos, inventario, empleados, almacén, entre otros.</p>
+            <a href="https://api.whatsapp.com/send?phone=51922076667&text=Buenos%20tiempos%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20construcci%C3%B3n%20de%20p%C3%A1ginas%20web.%20" class="button"> Comunicarse</a>
           </div>
 
           <div class="trick__content">
@@ -296,12 +329,9 @@
               alt=""
               class="trick__img"
             />
-            <h3 class="trick__title">E-commerce</h3>
-            <span class="trick__subtitle">Candy</span>
-            <span class="trick__price">$7.99</span>
-            <button class="button trick__button">
-              <i class="bx bx-cart-alt trick__icon"></i>
-            </button>
+            <h3 class="trick__title">E-COMMERCE</h3>
+            <p class="about__product">Sistema de ventas, pagos, pedidos online, con atención al cliente, entre otros.</p>
+            <a href="https://api.whatsapp.com/send?phone=51922076667&text=Buenos%20tiempos%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20construcci%C3%B3n%20de%20p%C3%A1ginas%20web.%20" class="button"> Comunicarse</a>
           </div>
 
           <div class="trick__content">
@@ -310,12 +340,9 @@
               alt=""
               class="trick__img"
             />
-            <h3 class="trick__title">Aplicación móvil</h3>
-            <span class="trick__subtitle">Candy</span>
-            <span class="trick__price">$19.99</span>
-            <button class="button trick__button">
-              <i class="bx bx-cart-alt trick__icon"></i>
-            </button>
+            <h3 class="trick__title">APLICACIÓN MÓVIL</h3>
+            <p class="about__product">Aplicaciones nativas e híbridas, con soporte para todos los celulares ios/android.</p>
+            <a href="https://api.whatsapp.com/send?phone=51922076667&text=Buenos%20tiempos%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20construcci%C3%B3n%20de%20p%C3%A1ginas%20web.%20" class="button"> Comunicarse</a>
           </div>
 
           <div class="trick__content">
@@ -324,12 +351,9 @@
               alt=""
               class="trick__img"
             />
-            <h3 class="trick__title">Servicios Web</h3>
-            <span class="trick__subtitle">Accessory</span>
-            <span class="trick__price">$17.99</span>
-            <button class="button trick__button">
-              <i class="bx bx-cart-alt trick__icon"></i>
-            </button>
+            <h3 class="trick__title">SERVICIOS WEB</h3>
+            <p class="about__product">Administración, equipamiento y solución para empresas medianas de alta recurrencia.</p>
+            <a href="https://api.whatsapp.com/send?phone=51922076667&text=Buenos%20tiempos%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20construcci%C3%B3n%20de%20p%C3%A1ginas%20web.%20" class="button"> Comunicarse</a>
           </div>
         </div>
       </section>
@@ -350,106 +374,82 @@
       </section>
       <!--Nuevos items-->
       <section class="section new" id="new">
-        <h2 class="section__title">Los recién llegados</h2>
+        <h2 class="section__title">Conoce a nuestro equipo</h2>
 
         <div class="new__container container">
           <div class="swiper new-swiper">
             <div class="swiper-wrapper">
+
               <div class="new__content swiper-slide">
-                <div class="new__tag">New</div>
+                <div class="new__tag">DEV</div>
                 <img src="assets/img/new1-img.png" alt="" class="new__img" />
-                <h3 class="new__title">Haunted House</h3>
-                <span class="new__subtitle">Accessory</span>
+                <h3 class="new__title">Kevin Gutiérrez Flores</h3>
+                <span class="new__subtitle">Backend Developer</span>
 
                 <div class="new__prices">
-                  <span class="new__price">$14.99</span>
-                  <span class="new__discount">$29.99</span>
+                  <a
+                          href="https://www.facebook.com/"
+                          target="_blank"
+                          class="footer__social-link"
+                  >
+                    <i class="bx bxl-whatsapp"></i>
+                  </a>
+                  <a
+                          href="https://www.instagram.com/"
+                          target="_blank"
+                          class="footer__social-link"
+                  >
+                    <i class="bx bxl-linkedin"></i>
+                  </a>
                 </div>
-
-                <button class="button new__button">
-                  <i class="bx bx-cart-alt new__icon"></i>
-                </button>
               </div>
 
               <div class="new__content swiper-slide">
-                <div class="new__tag">New</div>
+                <div class="new__tag">DEV</div>
                 <img src="assets/img/new2-img.png" alt="" class="new__img" />
-                <h3 class="new__title">Halloween Candle</h3>
-                <span class="new__subtitle">Accessory</span>
-
+                <h3 class="new__title">Sandro Castro</h3>
+                <span class="new__subtitle">Web Developer</span>
                 <div class="new__prices">
-                  <span class="new__price">$11.99</span>
-                  <span class="new__discount">$21.99</span>
+                  <a
+                          href="https://www.facebook.com/"
+                          target="_blank"
+                          class="footer__social-link"
+                  >
+                    <i class="bx bxl-whatsapp"></i>
+                  </a>
+                  <a
+                          href="https://www.instagram.com/"
+                          target="_blank"
+                          class="footer__social-link"
+                  >
+                    <i class="bx bxl-linkedin"></i>
+                  </a>
                 </div>
-
-                <button class="button new__button">
-                  <i class="bx bx-cart-alt new__icon"></i>
-                </button>
               </div>
 
               <div class="new__content swiper-slide">
-                <div class="new__tag">New</div>
+                <div class="new__tag">DESIGN</div>
                 <img src="assets/img/new3-img.png" alt="" class="new__img" />
-                <h3 class="new__title">Witch Hat</h3>
-                <span class="new__subtitle">Accessory</span>
-
+                <h3 class="new__title">Juan Pérez</h3>
+                <span class="new__subtitle">Android/ios Developer</span>
                 <div class="new__prices">
-                  <span class="new__price">$4.99</span>
-                  <span class="new__discount">$9.99</span>
+                  <a
+                          href="https://www.facebook.com/"
+                          target="_blank"
+                          class="footer__social-link"
+                  >
+                    <i class="bx bxl-whatsapp"></i>
+                  </a>
+                  <a
+                          href="https://www.instagram.com/"
+                          target="_blank"
+                          class="footer__social-link"
+                  >
+                    <i class="bx bxl-linkedin"></i>
+                  </a>
                 </div>
-
-                <button class="button new__button">
-                  <i class="bx bx-cart-alt new__icon"></i>
-                </button>
               </div>
 
-              <div class="new__content swiper-slide">
-                <div class="new__tag">New</div>
-                <img src="assets/img/new4-img.png" alt="" class="new__img" />
-                <h3 class="new__title">Rip</h3>
-                <span class="new__subtitle">Accessory</span>
-
-                <div class="new__prices">
-                  <span class="new__price">$24.99</span>
-                  <span class="new__discount">$44.99</span>
-                </div>
-
-                <button class="button new__button">
-                  <i class="bx bx-cart-alt new__icon"></i>
-                </button>
-              </div>
-
-              <div class="new__content swiper-slide">
-                <div class="new__tag">New</div>
-                <img src="assets/img/new5-img.png" alt="" class="new__img" />
-                <h3 class="new__title">Terrifying Crystal Ball</h3>
-                <span class="new__subtitle">Accessory</span>
-
-                <div class="new__prices">
-                  <span class="new__price">$5.99</span>
-                  <span class="new__discount">$12.99</span>
-                </div>
-
-                <button class="button new__button">
-                  <i class="bx bx-cart-alt new__icon"></i>
-                </button>
-              </div>
-
-              <div class="new__content swiper-slide">
-                <div class="new__tag">New</div>
-                <img src="assets/img/new6-img.png" alt="" class="new__img" />
-                <h3 class="new__title">Witch Broom</h3>
-                <span class="new__subtitle">Accessory</span>
-
-                <div class="new__prices">
-                  <span class="new__price">$7.99</span>
-                  <span class="new__discount">$14.99</span>
-                </div>
-
-                <button class="button new__button">
-                  <i class="bx bx-cart-alt new__icon"></i>
-                </button>
-              </div>
             </div>
           </div>
         </div>
