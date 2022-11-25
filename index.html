@@ -46,7 +46,7 @@
             <li class="nav__item">
               <a href="#new" class="nav__link">Tecnología</a>
             </li>
-            <a href="#" class="button button--ghost">Contacto</a>
+            <a id="openForm" class="button button--ghost">Contacto</a>
           </ul>
           <div class="nav__close" id="nav-close">
             <i class="bx bx-x"></i>
@@ -59,6 +59,33 @@
       </nav>
     </header>
     <!-- #endregion -->
+    <!-- #region formulario de registro  -->
+    <div class="form-popup" id="myForm">
+      <form action="/" class="form-container">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="Escribe Nombre" id="contact_name" name="nombre" required>
+
+        <label for="email">Email</label>
+        <input type="text" placeholder="Escribe Email" id="contact_email" name="email" required>
+
+        <label for="eleccion">Selecciona</label>
+        <select name="select" class="my-select-menu" id="eleccion">
+          <option value="sistemaweb">Sistema Web</option>
+          <option value="ecommerce">Ecommerce</option>
+          <option value="servicioweb">Servicio Web</option>
+          <option value="paginaweb">Página Web</option>
+          <option value="paginaadaptable">Página Adaptable</option>
+        </select>
+
+        <label for="desc">Descripcion (opcional)</label>
+        <textarea name="descripcion" class="descripcion" id="contact_desc"></textarea>
+
+        <button type="submit" class="btn">Enviar</button>
+        <button type="button" class="btn cancel" id="closeForm">Cancelar</button>
+      </form>
+    </div>
+    <!-- #endregion formulario de registro  -->
     <!-- #region Principal-->
     <main class="main">
       <!--Menu inicial-->
@@ -127,6 +154,10 @@
                     TIENDA  <br />
                     VIRTUAL <br />
                   </h1>
+                  <p class="home__description">
+                    Desarrollamos aplicaciones con tecnologías modernas, para un mejor desempeño,
+                    en los procesos de tu empresa. 
+                  </p>
                   <div class="home__buttons">
                     <a href="#" class="button">Prueba Gratis!</a>
                   </div>
@@ -179,8 +210,8 @@
       <!--Categirias-->
       <section class="section category">
         <h2 class="section__title">
-          Susto Favorito <br />
-          Categorias
+          𝚉𝚈𝙲𝚁𝚈𝚇 𝙴𝙽𝚃𝙴𝚁𝙿𝚁𝙸𝚂𝙴 <br />
+          Nuestros objetivos...
         </h2>
 
         <div class="category__container container grid">
@@ -190,9 +221,9 @@
               alt=""
               class="category__img"
             />
-            <h3 class="category__title">Fantasmas</h3>
+            <h3 class="category__title">Misión</h3>
             <p class="category__description">
-              Choose the ghosts, the scariest there are.
+              Ser una empresa reconocida a nivel nacional en el desarrollo, diseño e implementación de páginas web creativas, ofrecer calidad, innovación y prestigio para nuestros clientes con servicios tecnológicos de última gama con especialistas en cada campo de desarrollo.
             </p>
           </div>
 
@@ -202,9 +233,9 @@
               alt=""
               class="category__img"
             />
-            <h3 class="category__title">Calabazas</h3>
+            <h3 class="category__title">Visión</h3>
             <p class="category__description">
-              You look at the scariest pumpkins there is.
+              Desarrollar tecnología e implementar transformacion tecnológica para nuestros clientes a nivel internacional con calidad, prestigio, distinción y compromiso con nuestros clientes que quieren destacar y automatizar procesos facilitando el desarrollo de actividades y tareas cumpliendo con sus objetivos de negocios para crecer como empresa juntos.
             </p>
           </div>
 
@@ -214,9 +245,9 @@
               alt=""
               class="category__img"
             />
-            <h3 class="category__title">Sombrero de bruja</h3>
+            <h3 class="category__title">Equipo</h3>
             <p class="category__description">
-              Pick the most stylish witch hats out there.
+              Somos un grupo de desarrolladores web y de software, utilizamos herramientas de alto nivel y de gran capacidad para realizar un producto software de calidad, escalable y de interfaz cómoda para el usuario.
             </p>
           </div>
         </div>
@@ -226,17 +257,14 @@
         <div class="about__container container grid">
           <div class="about__data">
             <h2 class="section__title about__title">
-              Acerca de Halloween
-              <br />
-              Night
+              Acerca de Zycryx
             </h2>
             <p class="about__description">
-              Night of all the saints, or all the dead, is celebrated on October
-              31 and it is a very fun international celebration, this
-              celebration comes from ancient origins, and is already celebrated
-              by everyone.
+              Zycryx, comenzó como un grupo de desarrolladores freelancers, en los cuales vimos la oportunidad de desempeñarnos e involucrarnos en proyectos más ambiciosos, tanto para beneficio propio como para pequeñas empresas
+              que necesitan una transformación tecnológica, ahora estamos comprometida con el desarrollo de nuestros clientes, comprendiendo sus objetivos, analizando sus procesos, optimizando y modernizando los mismos, en los cuales
+              alcanzamos una automatización con tecnologías de información, simplificando procesos de negocio.
             </p>
-            <a href="#" class="button"> Saber más</a>
+            <a href="#" class="button"> Comunicarse</a>
           </div>
 
           <img src="assets/img/about-img.png" alt="" class="about__img" />
@@ -244,7 +272,7 @@
       </section>
       <!--Truco o trato-->
       <section class="section trick" id="trick">
-        <h2 class="section__title">Truco o trato</h2>
+        <h2 class="section__title">PRODUCTOS</h2>
 
         <div class="trick__container container grid">
           <div class="trick__content">
@@ -253,9 +281,14 @@
               alt=""
               class="trick__img"
             />
-            <h3 class="trick__title">Toffee</h3>
-            <span class="trick__subtitle">Candy</span>
-            <span class="trick__price">$11.99</span>
+            <h3 class="trick__title">WEBSITE</h3>
+            <p class="about__product">Página Web de presentación - Ideal para páginas de hoja de vida, publicidad, contacto, entre otros.</p>
+            
+            <div class="new__prices">
+              <span class="new__price">s/. 3000.00</span>
+              <span class="new__discount">s/. 3225.00</span>
+            </div>
+
             <button class="button trick__button">
               <i class="bx bx-cart-alt trick__icon"></i>
             </button>
@@ -267,9 +300,13 @@
               alt=""
               class="trick__img"
             />
-            <h3 class="trick__title">Bone</h3>
-            <span class="trick__subtitle">Accessory</span>
-            <span class="trick__price">$8.99</span>
+            <h3 class="trick__title">WEBSITE PREMIUM</h3>
+            <p class="about__product">Página adaptable a todos los dispositivos, equipado con carga más rápida y elementos modernos.</p>
+            <div class="new__prices">
+              <span class="new__price">s/. 7000.00</span>
+              <span class="new__discount">s/. 7800.00</span>
+            </div>
+
             <button class="button trick__button">
               <i class="bx bx-cart-alt trick__icon"></i>
             </button>
@@ -281,12 +318,9 @@
               alt=""
               class="trick__img"
             />
-            <h3 class="trick__title">Scarecrow</h3>
-            <span class="trick__subtitle">Accessory</span>
-            <span class="trick__price">$15.99</span>
-            <button class="button trick__button">
-              <i class="bx bx-cart-alt trick__icon"></i>
-            </button>
+            <h3 class="trick__title">SISTEMA WEB</h3>
+            <p class="about__product">Sistemas Web, con módulos para recursos humanos, inventario, empleados, almacén, entre otros.</p>
+            <a href="https://api.whatsapp.com/send?phone=51922076667&text=Buenos%20tiempos%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20construcci%C3%B3n%20de%20p%C3%A1ginas%20web.%20" class="button"> Comunicarse</a>
           </div>
 
           <div class="trick__content">
@@ -295,12 +329,9 @@
               alt=""
               class="trick__img"
             />
-            <h3 class="trick__title">Candy Cane</h3>
-            <span class="trick__subtitle">Candy</span>
-            <span class="trick__price">$7.99</span>
-            <button class="button trick__button">
-              <i class="bx bx-cart-alt trick__icon"></i>
-            </button>
+            <h3 class="trick__title">E-COMMERCE</h3>
+            <p class="about__product">Sistema de ventas, pagos, pedidos online, con atención al cliente, entre otros.</p>
+            <a href="https://api.whatsapp.com/send?phone=51922076667&text=Buenos%20tiempos%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20construcci%C3%B3n%20de%20p%C3%A1ginas%20web.%20" class="button"> Comunicarse</a>
           </div>
 
           <div class="trick__content">
@@ -309,12 +340,9 @@
               alt=""
               class="trick__img"
             />
-            <h3 class="trick__title">Pumpkin</h3>
-            <span class="trick__subtitle">Candy</span>
-            <span class="trick__price">$19.99</span>
-            <button class="button trick__button">
-              <i class="bx bx-cart-alt trick__icon"></i>
-            </button>
+            <h3 class="trick__title">APLICACIÓN MÓVIL</h3>
+            <p class="about__product">Aplicaciones nativas e híbridas, con soporte para todos los celulares ios/android.</p>
+            <a href="https://api.whatsapp.com/send?phone=51922076667&text=Buenos%20tiempos%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20construcci%C3%B3n%20de%20p%C3%A1ginas%20web.%20" class="button"> Comunicarse</a>
           </div>
 
           <div class="trick__content">
@@ -323,12 +351,9 @@
               alt=""
               class="trick__img"
             />
-            <h3 class="trick__title">Ghost</h3>
-            <span class="trick__subtitle">Accessory</span>
-            <span class="trick__price">$17.99</span>
-            <button class="button trick__button">
-              <i class="bx bx-cart-alt trick__icon"></i>
-            </button>
+            <h3 class="trick__title">SERVICIOS WEB</h3>
+            <p class="about__product">Administración, equipamiento y solución para empresas medianas de alta recurrencia.</p>
+            <a href="https://api.whatsapp.com/send?phone=51922076667&text=Buenos%20tiempos%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20construcci%C3%B3n%20de%20p%C3%A1ginas%20web.%20" class="button"> Comunicarse</a>
           </div>
         </div>
       </section>
@@ -337,11 +362,12 @@
         <div class="discount__container container grid">
           <div class="discount__data">
             <h2 class="discount__title">
-              50% de descuento <br />
+              Prueba nuestros productos <br />
 
-              Sobre nuevos productos
+              Visita nuestra página de ejemplo.
             </h2>
-            <a href="#" class="button">Ir a nuevo</a>
+            <a href="#" class="button">Ver Website</a>
+            <a href="#" class="button">Ver E-commerce</a>
           </div>
 
           <img src="assets/img/discount-img.png" alt="" class="discount__img" />
@@ -349,128 +375,87 @@
       </section>
       <!--Nuevos items-->
       <section class="section new" id="new">
-        <h2 class="section__title">Los recién llegados</h2>
+        <h2 class="section__title">Conoce a nuestro equipo</h2>
 
         <div class="new__container container">
           <div class="swiper new-swiper">
             <div class="swiper-wrapper">
+
               <div class="new__content swiper-slide">
-                <div class="new__tag">New</div>
-                <img src="assets/img/new1-img.png" alt="" class="new__img" />
-                <h3 class="new__title">Haunted House</h3>
-                <span class="new__subtitle">Accessory</span>
+                <div class="new__tag">DEV</div>
+                <img src="assets/img/kevin.png" alt="" class="new__img" />
+                <h3 class="new__title">Kevin Gutiérrez</h3>
+                <span class="new__subtitle">Backend Developer</span>
 
                 <div class="new__prices">
-                  <span class="new__price">$14.99</span>
-                  <span class="new__discount">$29.99</span>
+                  <a
+                          href="https://www.facebook.com/"
+                          target="_blank"
+                          class="footer__social-link"
+                  >
+                    <i class="bx bxl-whatsapp"></i>
+                  </a>
+                  <a
+                          href="https://www.instagram.com/"
+                          target="_blank"
+                          class="footer__social-link"
+                  >
+                    <i class="bx bxl-linkedin"></i>
+                  </a>
                 </div>
-
-                <button class="button new__button">
-                  <i class="bx bx-cart-alt new__icon"></i>
-                </button>
               </div>
 
               <div class="new__content swiper-slide">
-                <div class="new__tag">New</div>
-                <img src="assets/img/new2-img.png" alt="" class="new__img" />
-                <h3 class="new__title">Halloween Candle</h3>
-                <span class="new__subtitle">Accessory</span>
-
+                <div class="new__tag">DEV</div>
+                <img src="assets/img/sandro.png" alt="" class="new__img" />
+                <h3 class="new__title">Sandro Castro</h3>
+                <span class="new__subtitle">Web Developer</span>
                 <div class="new__prices">
-                  <span class="new__price">$11.99</span>
-                  <span class="new__discount">$21.99</span>
+                  <a
+                          href="https://www.facebook.com/"
+                          target="_blank"
+                          class="footer__social-link"
+                  >
+                    <i class="bx bxl-whatsapp"></i>
+                  </a>
+                  <a
+                          href="https://www.instagram.com/"
+                          target="_blank"
+                          class="footer__social-link"
+                  >
+                    <i class="bx bxl-linkedin"></i>
+                  </a>
                 </div>
-
-                <button class="button new__button">
-                  <i class="bx bx-cart-alt new__icon"></i>
-                </button>
               </div>
 
               <div class="new__content swiper-slide">
-                <div class="new__tag">New</div>
+                <div class="new__tag">DESIGN</div>
                 <img src="assets/img/new3-img.png" alt="" class="new__img" />
-                <h3 class="new__title">Witch Hat</h3>
-                <span class="new__subtitle">Accessory</span>
-
+                <h3 class="new__title">Juan Pérez</h3>
+                <span class="new__subtitle">Android/ios Developer</span>
                 <div class="new__prices">
-                  <span class="new__price">$4.99</span>
-                  <span class="new__discount">$9.99</span>
+                  <a
+                          href="https://www.facebook.com/"
+                          target="_blank"
+                          class="footer__social-link"
+                  >
+                    <i class="bx bxl-whatsapp"></i>
+                  </a>
+                  <a
+                          href="https://www.instagram.com/"
+                          target="_blank"
+                          class="footer__social-link"
+                  >
+                    <i class="bx bxl-linkedin"></i>
+                  </a>
                 </div>
-
-                <button class="button new__button">
-                  <i class="bx bx-cart-alt new__icon"></i>
-                </button>
               </div>
 
-              <div class="new__content swiper-slide">
-                <div class="new__tag">New</div>
-                <img src="assets/img/new4-img.png" alt="" class="new__img" />
-                <h3 class="new__title">Rip</h3>
-                <span class="new__subtitle">Accessory</span>
-
-                <div class="new__prices">
-                  <span class="new__price">$24.99</span>
-                  <span class="new__discount">$44.99</span>
-                </div>
-
-                <button class="button new__button">
-                  <i class="bx bx-cart-alt new__icon"></i>
-                </button>
-              </div>
-
-              <div class="new__content swiper-slide">
-                <div class="new__tag">New</div>
-                <img src="assets/img/new5-img.png" alt="" class="new__img" />
-                <h3 class="new__title">Terrifying Crystal Ball</h3>
-                <span class="new__subtitle">Accessory</span>
-
-                <div class="new__prices">
-                  <span class="new__price">$5.99</span>
-                  <span class="new__discount">$12.99</span>
-                </div>
-
-                <button class="button new__button">
-                  <i class="bx bx-cart-alt new__icon"></i>
-                </button>
-              </div>
-
-              <div class="new__content swiper-slide">
-                <div class="new__tag">New</div>
-                <img src="assets/img/new6-img.png" alt="" class="new__img" />
-                <h3 class="new__title">Witch Broom</h3>
-                <span class="new__subtitle">Accessory</span>
-
-                <div class="new__prices">
-                  <span class="new__price">$7.99</span>
-                  <span class="new__discount">$14.99</span>
-                </div>
-
-                <button class="button new__button">
-                  <i class="bx bx-cart-alt new__icon"></i>
-                </button>
-              </div>
             </div>
           </div>
         </div>
       </section>
-      <!--Suscribirse-->
-      <section class="section newsletter">
-        <div class="newsletter__container container">
-          <h2 class="section__title">Our Newsletter</h2>
-          <p class="newsletter__description">
-            Promotion new products and sales. Directly to your inbox
-          </p>
-
-          <form action="" class="newsletter__form">
-            <input
-              type="text"
-              placeholder="Enter your email"
-              class="newsletter__input"
-            />
-            <button class="button">Subscribe</button>
-          </form>
-        </div>
-      </section>
+      
     </main>
     <!--Pie de pagina-->
     <footer class="footer section">
@@ -560,7 +545,7 @@
         </div>
       </div>
 
-      <span class="footer__copy">&#169; Halloween page</span>
+      <span class="footer__copy">&#169; Todos los derechos reservados - ZYCRYX</span>
 
       <img src="assets/img/footer1-img.png" alt="" class="footer__img-one" />
       <img src="assets/img/footer2-img.png" alt="" class="footer__img-two" />

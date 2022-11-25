@@ -75,3 +75,15 @@ sr.reveal(`.category__data, .trick__content, .footer__content`, {
 });
 sr.reveal(`.about__data, .discount__img`, { origin: "left" });
 sr.reveal(`.about__img, .discount__data`, { origin: "right" });
+
+//Formulario Popup
+
+const btnOpen = document.getElementById('openForm'),
+    btnClose = document.getElementById('closeForm'),
+    open = ()=> {document.getElementById("myForm").style.display = "block";},
+    close = ()=> {
+        document.getElementById('myForm').style.display = "none";
+    };
+
+btnOpen.addEventListener('click', open );
+btnClose.addEventListener('click', close);
